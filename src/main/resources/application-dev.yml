@@ -6,13 +6,19 @@ spring:
     application:
         name: boilerplate-webflux
     r2dbc:
-        url: ${URL:r2dbc:postgresql://localhost:5432/postgres}
+        url: ${URL:r2dbc:postgresql://localhost:5432/boilerplate_db}
         username: ${USERNAME:postgres}
         password: ${PASSWORD:1234}
     data:
         r2dbc:
             repositories:
                 enabled: true
+    graphql:
+        graphiql:
+          enabled: true
+        path: /graphql
+
+
 logging:
     level:
       org:
