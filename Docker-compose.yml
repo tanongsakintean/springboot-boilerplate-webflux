@@ -33,6 +33,18 @@ services:
       - .m2:/root/.m2
     stdin_open: true
     tty: true
+  redis:
+    container_name: redis_cache_db
+    image: redis
+    ports:
+      - "6379:6379"
+    environment:
+      - REDIS_REPLICATION_MODE=master
+  redis-insight:
+    image: redislabs/redisinsight
+    container_name: redis-insight
+    ports:
+      - "8001:8001"
 
 
 volumes:

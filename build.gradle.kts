@@ -58,6 +58,12 @@ dependencies {
 	implementation("io.opentelemetry:opentelemetry-sdk:1.28.0")
 	implementation("io.opentelemetry:opentelemetry-exporter-otlp:1.28.0")
 	implementation("io.opentelemetry:opentelemetry-semconv:1.28.0-alpha")
+
+	// cache redis
+	implementation("org.springframework.boot:spring-boot-starter-data-redis-reactive")
+	implementation("org.springframework.boot:spring-boot-starter-cache")
+	implementation("io.projectreactor:reactor-core")
+
 }
 
 kotlin {
